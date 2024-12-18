@@ -1,5 +1,5 @@
 # Student Hub 專案
-這是一個前後端分離的專案（基於MVC架構）。
+這是一個前後端分離的專案
 
 ### 功能
 * Create: 新增資料
@@ -15,8 +15,6 @@
 * API測試 : PostMan
 * 安裝套件 : npm
 
-#### 瀏覽應用
-在瀏覽器中打開 http://localhost:5173 來使用應用。
 
 ### API 規格說明
 #### API 基本資訊
@@ -24,124 +22,12 @@
 * 格式 : JSON
 #### 查詢學生資料(Read)
 * GET 方法
-* 描述 : 根據學生的缺席次數、姓名或座號查詢資料。
+* 根據學生的缺席次數、姓名或座號查詢資料。
 
 #### 新增學生資料(Create)
 * POST 方法
-* 描述 : 新增一筆學生資料。
+*  新增一筆學生資料。
 
-(請求參數)
-* Body :
-```typescript
-{
-    "userName": "tkuim1234",
-    "name": "王大明",
-    "department": "資訊管理學系",
-    "grade": "6",
-    "class": "g",
-    "Email": "min@gmail.com"
-}
-```
-
-(回應)
-* 成功 : 
-```typescript
-{
-    "code": 200,
-    "message": "",
-    "body": {
-        "userName": "tkuim1234",
-        "name": "王大明",
-        "department": "資訊管理學系",
-        "grade": "6",
-        "class": "g",
-        "Email": "min@gmail.com"
-        "_id": "6759b6c52927e07a0ddeb599",
-        "__v": 0
-    }
-}
-```
-
-* 失敗 : 
-```typescript
-{
-  "code": 403,
-  "message": ""
-}
-```
-
-#### 刪除學生資料(Delete)
-* DELETE 方法
-* 根據帳號刪除學生資料。
-
-(請求參數)
-* Body :
-```typescript
-{
-  "userName": "tkuim1234"
-}
-```
-
-(回應)
-* 成功 : 
-```typescript
-{
-  "code": 200,
-  "message": "刪除成功",
-  "body": {
-    "userName": "tkuim1234"
-  }
-}
-```
-
-* 失敗 : 
-```typescript
-{
-  "code": 400,
-  "message": "用戶名是必需的"
-}
-```
-
-#### 更新學生資料(Update)
-* PUT 方法
-* 根據帳號更新學生名字。
-
-(請求參數)
-* Body :
-```typescript
-{
-  "userName": "tkuim1234",
-  "name": "王大明"
-}
-```
-
-(回應)
-* 成功 : 
-```typescript
-{
-  "code": 200,
-  "message": "更新成功",
-  "body": {
-    "userName": "tkuim1234",
-    "name": "王大明"
-  }
-}
-```
-
-* 失敗 : 
-```typescript
-{
-  "code": 400,
-  "message": "userName 和 name 是必需的參數"
-}
-```
-
-### 架構圖 : 展示前端、後端、資料庫及其互動
-![架構圖](image.png)
-
-### 流程圖：描述 CRUD 功能的操作流程。
-#### 流程圖
-![流程圖](image-1.png)
 
 #### 流程解說
 1. 使用者操作前端界面 : 使用者在 React 前端界面上提交表單或點擊按鈕（新增、查詢、更新或刪除學生資料）。
