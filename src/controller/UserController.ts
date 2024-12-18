@@ -66,4 +66,4 @@ export class UserController extends Contorller {
         Response.status(resp.code).send(resp);
     }    
     
-}
+} 
